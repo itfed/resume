@@ -77,9 +77,30 @@
         .social-icons a:hover {
             opacity: 0.8;
         }
+        /* Стили для кнопки скачивания PDF */
+        .download-pdf {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #D4AF37;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        .download-pdf:hover {
+            background-color: #c0a037;
+        }
     </style>
 </head>
 <body>
+
+    <!-- Кнопка для скачивания PDF -->
+    <a href="resume.pdf" class="download-pdf" download>
+        <i class="fas fa-download"></i> Скачать PDF
+    </a>
 
     <header class="bg-dark text-white text-center py-3">
         <div class="container header-content">

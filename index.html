@@ -10,6 +10,7 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #f8f9fa;
+            color: #333; /* Основной цвет текста */
         }
         .profile-img {
             width: 150px;
@@ -17,28 +18,48 @@
             border-radius: 50%;
             object-fit: cover;
             margin-bottom: 20px;
+            border: 3px solid #D4AF37; /* Золотая рамка для фото */
         }
         .section {
             margin-bottom: 40px;
         }
         .section h2 {
-            color: #333;
-            border-bottom: 2px solid #007BFF;
+            color: #2C3E50; /* Темно-серый для заголовков */
+            border-bottom: 2px solid #D4AF37; /* Золотая линия под заголовками */
             padding-bottom: 10px;
             margin-bottom: 20px;
         }
         .footer {
-            background-color: #333;
+            background-color: #2C3E50; /* Темно-серый фон подвала */
             color: #fff;
             padding: 20px 0;
             text-align: center;
+        }
+        .footer a {
+            color: #D4AF37; /* Золотой цвет для ссылок */
+        }
+        .footer a:hover {
+            color: #f8f9fa; /* Светлый цвет при наведении */
+        }
+        .list-group-item {
+            border: 1px solid #ddd; /* Серая рамка для элементов списка */
+            margin-bottom: 5px;
+        }
+        .card {
+            border: 1px solid #ddd; /* Серая рамка для карточек */
+        }
+        .card-title {
+            color: #2C3E50; /* Темно-серый для заголовков карточек */
+        }
+        .card-text {
+            color: #555; /* Серый для текста карточек */
         }
     </style>
 </head>
 <body>
 
     <!-- Шапка сайта -->
-    <header class="bg-primary text-white text-center py-5">
+    <header class="bg-dark text-white text-center py-5"> <!-- Темный фон шапки -->
         <div class="container">
             <img src="yu-UfYZy-dU.jpg" alt="Мое Фото" class="profile-img"> <!-- Мое фото -->
             <h1>Федунов Константин</h1>
@@ -119,8 +140,8 @@
     <!-- Подвал сайта -->
     <footer class="footer">
         <div class="container">
-            <p>Свяжитесь со мной: <a href="mailto:i@ko-fed.ru" class="text-white">i@ko-fed.ru</a></p>
-            <p>GitHub: <a href="https://github.com/itfed" class="text-white">github.com/itfed</a></p>
+            <p>Свяжитесь со мной: <a href="mailto:i@ko-fed.ru">i@ko-fed.ru</a></p>
+            <p>GitHub: <a href="https://github.com/itfed">github.com/itfed</a></p>
         </div>
     </footer>
 

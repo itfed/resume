@@ -6,6 +6,8 @@
     <title>Резюме - Федунов Константин</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -65,6 +67,18 @@
         .card-text {
             color: #555; /* Серый для текста карточек */
         }
+        .social-icons {
+            margin-top: 10px; /* Отступ между номером телефона и иконками */
+        }
+        .social-icons a {
+            color: white; /* Белый цвет иконок */
+            font-size: 24px; /* Размер иконок */
+            margin: 0 10px; /* Отступ между иконками */
+            text-decoration: none; /* Убираем подчёркивание */
+        }
+        .social-icons a:hover {
+            opacity: 0.8; /* Эффект при наведении */
+        }
     </style>
 </head>
 <body>
@@ -75,6 +89,15 @@
             <h1>Федунов Константин</h1>
             <p class="lead">Junior Python Developer</p>
             <p class="mt-0">+7 924 193 98 97</p> <!-- Убираем отступ после номера телефона -->
+            <!-- Иконки WhatsApp и Telegram -->
+            <div class="social-icons">
+                <a href="https://wa.me/79241939897" target="_blank" title="Написать в WhatsApp">
+                    <i class="fab fa-whatsapp"></i> <!-- Иконка WhatsApp -->
+                </a>
+                <a href="https://t.me/fedun_off" target="_blank" title="Написать в Telegram">
+                    <i class="fab fa-telegram-plane"></i> <!-- Иконка Telegram -->
+                </a>
+            </div>
         </div>
         <img src="yu-UfYZy-dU.jpg" alt="Мое Фото" class="profile-img mx-auto d-block"> <!-- Мое фото -->
     </header>

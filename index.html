@@ -79,8 +79,8 @@
         }
         /* Стили для кнопки скачивания PDF */
         .download-pdf {
-            position: absolute; /* Изменено на absolute */
-            bottom: 80px; /* Увеличен отступ от низа */
+            position: fixed; /* Оставляем фиксированное позиционирование */
+            bottom: 20px; /* Отступ от низа */
             right: 20px;
             background-color: #D4AF37;
             color: white;
@@ -92,6 +92,10 @@
         }
         .download-pdf:hover {
             background-color: #c0a037;
+        }
+        /* Добавляем отступ внизу основного контейнера */
+        .container {
+            padding-bottom: 80px; /* Увеличьте отступ, чтобы кнопка не перекрывала контент */
         }
     </style>
 </head>

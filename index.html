@@ -253,18 +253,19 @@
             const footerTop = footer.getBoundingClientRect().top;
             const buttonHeight = downloadButton.offsetHeight;
             const offset = 20; // Отступ от подвала
+            const footerContentHeight = footer.querySelector('.container').offsetHeight; 
 
-            // Вычисляем новое положение кнопки
-            if (footerTop - buttonHeight - offset < 0) {
-                // Если кнопка приближается к подвалу, останавливаем её
-                downloadButton.style.bottom = `${-footerTop + offset}px`;
+            
+            if (footerTop - buttonHeight - offset < footerContentHeight) {
+                
+                downloadButton.style.bottom = `${footerContentHeight + offset}px`;
             } else {
                 // Иначе возвращаем кнопку в исходное положение
                 downloadButton.style.bottom = `${offset}px`;
             }
         }
 
-        // Оптимизация с использованием requestAnimationFrame
+        
         let isScrolling;
         window.addEventListener('scroll', () => {
             window.cancelAnimationFrame(isScrolling);

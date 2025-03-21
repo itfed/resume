@@ -79,7 +79,7 @@
         }
         /* Стили для кнопки скачивания PDF */
         .download-pdf {
-            position: sticky;
+            position: fixed;
             bottom: 20px;
             right: 20px;
             background-color: #D4AF37;
@@ -89,9 +89,6 @@
             text-decoration: none;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             z-index: 1000;
-            margin-left: auto; /* Выравнивание по правому краю */
-            width: fit-content; /* Ширина по содержимому */
-            margin-top: 20px; /* Отступ сверху */
         }
         .download-pdf:hover {
             background-color: #c0a037;
@@ -99,6 +96,11 @@
     </style>
 </head>
 <body>
+
+    <!-- Кнопка для скачивания PDF -->
+    <a href="fedunov-resume.pdf" class="download-pdf" download>
+        <i class="fas fa-download"></i> Скачать PDF
+    </a>
 
     <header class="bg-dark text-white text-center py-3">
         <div class="container header-content">
@@ -240,11 +242,6 @@
             <p>GitHub: <a href="https://github.com/itfed">github.com/itfed</a></p>
         </div>
     </footer>
-
-    <!-- Кнопка для скачивания PDF -->
-    <a href="fedunov-resume.pdf" class="download-pdf" download>
-        <i class="fas fa-download"></i> Скачать PDF
-    </a>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

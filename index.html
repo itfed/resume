@@ -79,7 +79,7 @@
         }
         /* Стили для кнопки скачивания PDF */
         .download-pdf {
-            position: fixed;
+            position: sticky;
             bottom: 20px;
             right: 20px;
             background-color: #D4AF37;
@@ -89,7 +89,9 @@
             text-decoration: none;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             z-index: 1000;
-            transition: bottom 0.2s ease; /* Плавное перемещение */
+            margin-left: auto; /* Выравнивание по правому краю */
+            width: fit-content; /* Ширина по содержимому */
+            margin-top: 20px; /* Отступ сверху */
         }
         .download-pdf:hover {
             background-color: #c0a037;
@@ -97,11 +99,6 @@
     </style>
 </head>
 <body>
-
-    <!-- Кнопка для скачивания PDF -->
-    <a href="fedunov-resume.pdf" class="download-pdf" download>
-        <i class="fas fa-download"></i> Скачать PDF
-    </a>
 
     <header class="bg-dark text-white text-center py-3">
         <div class="container header-content">
@@ -244,36 +241,11 @@
         </div>
     </footer>
 
+    <!-- Кнопка для скачивания PDF -->
+    <a href="fedunov-resume.pdf" class="download-pdf" download>
+        <i class="fas fa-download"></i> Скачать PDF
+    </a>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Функция для плавного управления кнопкой
-        function adjustDownloadButton() {
-            const downloadButton = document.querySelector('.download-pdf');
-            const footer = document.querySelector('.footer');
-            const footerTop = footer.getBoundingClientRect().top;
-            const buttonHeight = downloadButton.offsetHeight;
-            const offset = 20; // Отступ от подвала
-            const footerContentHeight = footer.querySelector('.container').offsetHeight; 
-
-            
-            if (footerTop - buttonHeight - offset < footerContentHeight) {
-                
-                downloadButton.style.bottom = `${footerContentHeight + offset}px`;
-            } else {
-                // Иначе возвращаем кнопку в исходное положение
-                downloadButton.style.bottom = `${offset}px`;
-            }
-        }
-
-        
-        let isScrolling;
-        window.addEventListener('scroll', () => {
-            window.cancelAnimationFrame(isScrolling);
-            isScrolling = window.requestAnimationFrame(adjustDownloadButton);
-        });
-
-        // Вызываем функцию при загрузке страницы
-        window.addEventListener('load', adjustDownloadButton);
-    </script>
 </body>
 </html>
